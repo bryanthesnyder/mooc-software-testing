@@ -34,4 +34,14 @@ public class GettingStartedTest {
         int result = g.addFive(-20);
         Assertions.assertEquals(-15,result);
     }
+    
+    @Test									// Works, but its bad because they're technically different test cases, so they should be separated
+    public void badPractice() {				// because if a test case fails, we want to know WHICH one failed
+    	int result = g.addFive(20);
+        Assertions.assertEquals(25,result);
+        int result = g.addFive(0);
+        Assertions.assertEquals(5, result);
+        int result = g.addFive(-20);
+        Assertions.assertEquals(-15,result);
+    }
 }
